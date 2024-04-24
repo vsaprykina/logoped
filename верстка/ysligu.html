@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" type="text/css" href="./ysligu.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="./Снимок3.png" alt="Логотип">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="./glav.html">Главная</a></li>
+            <li><a href="./ysligu.html">Услуги</a></li>
+            <li><a href="./contact.html">Контакты</a></li>
+            <li><a href="./omni.html">Обо мне</a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <input type="search" placeholder="Поиск...">
+        <button type="submit" class="search-button"><img src="./поиск.png" alt="Поиск"></button>
+    </div>
+    <div class="appointment">
+        <a href="#appointment-form" class="button">Записаться на приём</a>
+    </div>
+</header>
+
+
+
+
+<section class="services">
+  <div class="services-header">
+    <h2>Услуги</h2>
+    <div class="underline"></div>
+  </div>
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-image">
+        <img src="./услуга 1.jpg" alt="Постановка, автоматизация, дифференциация звуков">
+      </div>
+      <div class="service-info">
+        <h3>Постановка, автоматизация, дифференциация звуков</h3>
+        <p>Продолжительность: 40 минут</p>
+        <p>Стоимость: 500 рублей</p>
+        <a href="file:///C:/Users/Lenovo/Desktop/верстка/ysligu.html#appointment-form" class="button3">Записаться</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-image">
+        <img src="./услуга 2.jpg" alt="Артикуляционная гимнастика">
+      </div>
+      <div class="service-info">
+        <h3>Артикуляционная гимнастика</h3>
+        <p>Продолжительность: 40 минут</p>
+        <p>Стоимость: 500 рублей</p>
+        <a href="file:///C:/Users/Lenovo/Desktop/верстка/ysligu.html#appointment-form" class="button3">Записаться</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-image">
+        <img src="./услуга 3.jpg" alt="Логопедический массаж">
+      </div>
+      <div class="service-info">
+        <h3>Логопедический массаж</h3>
+        <p>Продолжительность: 40 минут</p>
+        <p>Стоимость: 500 рублей</p>
+        <a href="file:///C:/Users/Lenovo/Desktop/верстка/ysligu.html#appointment-form" class="button3">Записаться</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-image">
+        <img src="./статья8.jpeg" alt="Логопедическое тейпирование">
+      </div>
+      <div class="service-info">
+        <h3>Логопедическое тейпирование</h3>
+        <p>Продолжительность: 40 минут</p>
+        <p>Стоимость: 500 рублей</p>
+        <a href="file:///C:/Users/Lenovo/Desktop/верстка/ysligu.html#appointment-form" class="button3">Записаться</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-image">
+        <img src="./статья3.jpg" alt="Развитие внимания, памяти и мышления">
+      </div>
+      <div class="service-info">
+        <h3>Развитие внимания, памяти и мышления</h3>
+        <p>Продолжительность: 40 минут</p>
+        <p>Стоимость: 500 рублей</p>
+        <a href="file:///C:/Users/Lenovo/Desktop/верстка/ysligu.html#appointment-form" class="button3">Записаться</a>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-image">
+        <img src="./статья4.jpg" alt="Бесплатная консультация">
+      </div>
+      <div class="service-info">
+        <h3>Бесплатная консультация</h3>
+        <p>Продолжительность: 40 минут</p>
+        <p>Стоимость: 0 рублей</p>
+        <a href="file:///C:/Users/Lenovo/Desktop/верстка/ysligu.html#appointment-form" class="button3">Записаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="appointment-section">
+  <h2 class="section-title">Форма записи на прием</h2>
+  <div class="underline"></div>
+  <form id="appointment-form" class="appointment-form">
+      <input type="text" id="fullName" name="fullName" placeholder="Введите ФИО" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Введите только буквы" required>
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Введите номер телефона" pattern="[0-9]+" title="Введите только цифры" required>
+      <input type="date" id="appointmentDate" name="appointmentDate" required>
+      
+      <!-- Добавлено поле выбора времени -->
+      <select id="appointmentTime" name="appointmentTime" required>
+          <option value="">Выберите время</option>
+          <!-- Генерация вариантов времени с интервалом 40 минут от 10:00 до 19:00 -->
+          <!-- Используем JavaScript для генерации вариантов -->
+          <script>
+              // Создаем варианты времени с интервалом 40 минут от 10:00 до 19:00
+              var startTime = new Date();
+              startTime.setHours(10, 0, 0, 0); // Устанавливаем начальное время 10:00
+              
+              // Создаем варианты времени с интервалом 40 минут
+              var appointmentTimeSelect = document.getElementById('appointmentTime');
+              for (var i = 0; i < 18; i++) { // Создаем 18 вариантов, пока не превысим 19:00
+                  var option = document.createElement('option');
+                  option.text = startTime.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+                  option.value = startTime.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+                  appointmentTimeSelect.add(option);
+                  startTime.setMinutes(startTime.getMinutes() + 40); // Увеличиваем время на 40 минут
+                  if(startTime.getHours() >= 19) break; // Прекращаем создание вариантов после 19:00
+              }
+          </script>
+      </select>
+      
+      <select id="service" name="service" required>
+          <option value="">Выберите услугу</option>
+          <option value="Постановка, автоматизация, дифференциация звуков">Постановка, автоматизация, дифференциация звуков</option>
+          <option value="Артикуляционная гимнастика">Артикуляционная гимнастика</option>
+          <option value="Логопедический массаж">Логопедический массаж</option>
+          <option value="Логопедическое тейпирование">Логопедическое тейпирование</option>
+          <option value="Развитие внимания, памяти и мышления">Развитие внимания, памяти и мышления</option>
+          <option value="Развитие внимания, памяти и мышления">Бесплатная консультация</option>
+      </select>
+      
+      <div class="form-group">
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree">Я соглашаюсь с <a href="file:///C:/Users/Lenovo/Desktop/верстка/politika.html" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></label>
+      </div> 
+      <button type="submit">Записаться</button>
+  </form>
+</section>
+
+
+  
+
+
+  <footer>
+    <div class="footer-column">
+      <img src="./Снимок3.png" alt="Логотип">
+    </div>
+    <div class="footer-column">
+      <h3>Контакты</h3>
+      <p>+7(908)506-86-97</p>
+      <p>shapovalova.ale@yanndex.ru</p>
+      <p>г.Новочеркасск, р-н Молодежный, Речная 38</p>
+    </div>
+    <div class="footer-column">
+      <h3>Режим работы</h3>
+      <p>с 10:00 до 19:00 (пн-Сб)</p>
+    </div>
+    <div class="footer-column">
+      <h3>Мои соц. сети</h3>
+      <div class="social-icons">
+        <img src="./icons8-vk (2) 1.png" alt="Vk">
+        <img src="./icons8-whatsapp.png" alt="Whatsapp">
+        <img src="./Vector.png" alt="Telegram">
+      </div>
+    </div>
+  </footer>
+  <script src="./form.js"></script>
+</body>
+</html>
