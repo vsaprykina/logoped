@@ -1,0 +1,357 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fed3f4;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid #CA8CCD;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.search input:focus {
+  outline: none;
+  border-bottom: 2px solid #A566B0;
+}
+
+.search-button {
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+
+}
+.search-button:hover {
+  background-color: #A566B0;
+}
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.appointment {
+  display: flex;
+  align-items: center;
+}
+
+.appointment a {
+  text-decoration: none;
+  color: #CA8CCD;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 2px solid #CA8CCD;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 70px; /* Добавляем отступы справа и слева */
+}
+
+.appointment a:hover {
+  background-color: #CA8CCD;
+  color: white;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .logo img {
+      height: 30px;
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+}
+
+
+nav ul li a:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #5D001D; /* Цвет палочки */
+}
+
+
+
+.services {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  background-image: url('./фон3.PNG'); /* Замените 'background-image.jpg' на путь к вашему фоновому изображению */
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.underline {
+  width: 100px;
+  height: 4px;
+  background-color: #5D001D;
+  margin: 0 auto 20px;
+}
+
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* уменьшаем тень */
+  width: calc(30% - 20px); /* уменьшаем ширину карточек и добавляем отступы между ними */
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column; /* Выравниваем содержимое внутри карточки по вертикали */
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px; /* оставляем высоту неизменной */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.service-info {
+  padding: 20px;
+  flex-grow: 1; /* Занимаем все доступное пространство внутри карточки */
+}
+
+.service-info h3 {
+  margin-top: 0;
+}
+
+.service-info p {
+  margin-bottom: 10px;
+}
+
+.button3 {
+  margin-top: auto; /* Помещаем кнопку внизу карточки */
+  width: 95%;
+  padding: 10px;
+  background-color: #5D001D;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Сделать кнопку круглее */
+  cursor: pointer;
+  text-decoration: none; /* Убираем подчеркивание текста */
+  display: flex; /* Устанавливаем контейнеру кнопки режим flex */
+  align-items: center; /* Размещаем содержимое по вертикали по центру */
+  justify-content: center; /* Размещаем содержимое по горизонтали по центру */
+}
+
+.button3:hover {
+  background-color: #CA8CCD;
+}
+
+
+
+  
+
+  .appointment-section {
+    background-image: url('./фон2.PNG'); /* Замените 'background-image.jpg' на путь к вашему фоновому изображению */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 2px;
+    background-color: #5D001D;
+    margin: 0 auto 30px;
+  }
+  
+  .appointment-form {
+    max-width: 600px; /* Максимальная ширина формы */
+    margin: 0 auto;
+    padding: 80px; /* Увеличиваем внутренние отступы формы */
+    background-color: #fed3f4;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    
+  }
+  .appointment-form input:focus,
+  .appointment-form textarea:focus {
+      outline: none;
+  }
+  
+  
+
+  .appointment-form label {
+    color: #999;
+  }
+  
+  .appointment-form label {
+    color: #999; /* Серый цвет текста для названий полей */
+}
+
+.appointment-form input,
+.appointment-form textarea,
+.appointment-form select {
+    display: block;
+    width: calc(100% - 60px); /* Ширина полей ввода */
+    height: 20px; /* Высота полей */
+    margin-bottom: 20px; /* Увеличиваем расстояние между полями */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333; /* Цвет текста в полях */
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+  
+  .appointment-form textarea {
+    height: 100px;
+  }
+  
+  .appointment-form button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding: 2px;
+    background-color: #5D001D;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    right: 280px;
+    
+  }
+  
+  .appointment-form button:hover {
+    background-color:#CA8CCD;
+  }
+
+  .appointment-form select {
+    display: block;
+    width: calc(100% - 40px); /* Ширина поля */
+    height: 40px; /* Высота поля */
+    margin-bottom: 20px; /* Увеличиваем расстояние между полями */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    outline: none; /* Убираем обводку при фокусе */
+    appearance: none; /* Убираем стандартную стрелку для выбора */
+}
+.checkbox-label {
+  position: absolute;
+  left: calc(50% - 140px); /* Установка горизонтального положения текста */
+  top: calc(50% + 50px); /* Установка вертикального положения текста */
+  transform: translateX(-50%);
+  font-size: 14px; /* Размер шрифта текста */
+  color: #333; /* Цвет текста */
+}
+
+.checkbox {
+  position: absolute;
+  left: calc(50% - 180px); /* Установка горизонтального положения кнопки с галочкой */
+  top: calc(50% + 50px); /* Установка вертикального положения кнопки с галочкой */
+}
+
+
+.form-group input[type="checkbox"] {
+  position: absolute;
+  left: -220px; /* Устанавливаем отступ слева для чекбокса */
+  margin-top: -2px;
+}
+
+.form-group label {
+  display: inline; /* Размещаем текст в строку */
+  margin-left: 80px; /* Добавляем небольшой отступ слева от чекбокса */
+}
+
+
+
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fed3f4;
+  padding: 20px;
+  margin-bottom: -60px;
+  
+}
+
+.footer-column {
+  width: 20%;
+}
+
+.footer-column img {
+  max-width: 40%;
+  height: auto;
+}
+
+.social-icons img {
+  width: 30px;
+  margin-right: 10px;
+} 
+
+  
+
+
+
